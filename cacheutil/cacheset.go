@@ -53,5 +53,6 @@ func (c *CacheSet) ListElements(baseKey string) ([]string, error) {
 	for k := range m.datas {
 		elements = append(elements, k)
 	}
+
 	return elements, nil
 }
