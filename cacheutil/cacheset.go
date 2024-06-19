@@ -47,7 +47,7 @@ func (c *CacheSet) ListElements(baseKey string) ([]string, error) {
 
 	m, ok := c.dualBaseCaches[baseKey]
 	if !ok {
-		return elements, errors.New("baseKey not in dualBaseCaches")
+		return elements, nil
 	}
 
 	for k := range m.datas {
